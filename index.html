@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Corazón</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #aedff2; /* Fondo azul agua marina */
+            text-align: center;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+        }
+        .container {
+            background-color: #ffffff; /* Fondo blanco */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+            display: inline-block;
+        }
+        .button {
+            background-color: #4da8da; /* Azul claro */
+            color: #ffffff;
+            border: none;
+            padding: 20px 40px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #377d98; /* Azul más oscuro al pasar el mouse */
+        }
+        .snowflake {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ffffff;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            animation: snowfall linear infinite;
+            animation-duration: 10s;
+        }
+        @keyframes snowfall {
+            0% {
+                transform: translateY(-100vh);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dale click para ver lo que siente mi corazón</h1>
+        <button class="button" onclick="mostrarCarta()">Mostrar Carta</button>
+    </div>
+
+    <!-- Efecto de nieve -->
+    <script>
+        function createSnowflake() {
+            const snowflake = document.createElement("div");
+            snowflake.className = "snowflake";
+            snowflake.style.left = Math.random() * 100 + "vw";
+            document.body.appendChild(snowflake);
+            setTimeout(() => {
+                snowflake.remove();
+            }, 10000);
+        }
+
+        setInterval(createSnowflake, 100);
+    </script>
+
+    <script>
+        function mostrarCarta() {
+            window.location.href = "carta.html";
+        }
+    </script>
+</body>
+</html>

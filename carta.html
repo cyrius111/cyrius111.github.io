@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para mi novia </title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #aedff2; /* Fondo azul agua marina */
+            text-align: center;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .container {
+            background-color: #ffffff; /* Fondo blanco */
+            padding: 40px;
+            margin: 20px; /* Márgenes exteriores para separar del borde de la página */
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+            display: inline-block;
+            margin-top: 50vh;
+            transform: translateY(-50%);
+        }
+        h1 {
+            color: #4da8da; /* Azul claro */
+            font-size: 24px; /* Ajusta el tamaño del título si es necesario */
+        }
+        p {
+            color: #377d98; /* Azul más oscuro */
+            font-size: 18px;
+            margin-bottom: 20px; /* Márgenes inferiores para separar párrafos */
+        }
+        .signature {
+            font-style: italic;
+            color: #4da8da; /* Azul claro */
+        }
+        .heart {
+            color: #ff3366; /* Rojo oscuro */
+        }
+        .snowflake {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ffffff;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            animation: snowfall linear infinite;
+            animation-duration: 10s;
+        }
+        @keyframes snowfall {
+            0% {
+                transform: translateY(-100vh);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mi novia linda</h1>
+        <p>hoy 15 de octubre solo vuelvo a decirte una vez más lo mucho que te amo, creo que es notorio que mi amor por ti crece todos los días mucho más y que cada día que pasa simplemente me doy cuenta que eres mi amor verdadero, que todo este tiempo a tu lado simplemente ha sido grandioso y que no lo cambiaría por nada ya que has sido tú la que me ha enseñado amar, con cada rincón de mi corazón, fuiste tú la que me mostraste lo que es el verdadero amor y lo que es sentirse amado de verdad y por todo eso y más solo gracias mi vida, te amo y mi promesa seguirá firme contigo y es que te amaré con toda mi alma por toda la eternidad y que haré hasta lo imposible por estar toda mi vida junto a ti. Te amo <span class="heart">💙</span></p>
+        <p>Te amo mi tortuguita linda 💙 </p>
+    </div>
+
+    <!-- Efecto de nieve -->
+    <script>
+        function createSnowflake() {
+            const snowflake = document.createElement("div");
+            snowflake.className = "snowflake";
+            snowflake.style.left = Math.random() * 100 + "vw";
+            document.body.appendChild(snowflake);
+            setTimeout(() => {
+                snowflake.remove();
+            }, 10000);
+        }
+
+        setInterval(createSnowflake, 100);
+    </script>
+</body>
+</html>
